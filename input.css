@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+   --primary: #382C44;
+   --secondary: #FFD0BF;
+}
+@font-face {
+   font-family: 'Vegawanty';
+   src: url('./fonts/Vegawanty.ttf') format('truetype');
+}
+body{
+   background-color: var(--primary);
+   color: var(--secondary);
+   font-family: 'Vegawanty';
+}
+/* h1{
+   color: royalblue;
+} */
+header .icon{
+   width: 30px;
+   height: 30px;
+   object-fit: cover;
+}
+@media (max-width: 768px) {
+   header .icon{
+      width: 20px;
+      height: 20px;
+   }
+}
