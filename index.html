@@ -75,7 +75,7 @@
          </div>
          <nav class="hidden md:block">
             <ul class="flex items-center gap-8">
-               <li class="py-8 border-b-4">
+               <li class="py-8 border-b-4 border-secondary">
                   <a href="/">Home</a>
                </li>
                <li class="py-8">
@@ -99,16 +99,160 @@
             <a href="#" class="icon">
                <img src="./images/icons/heart.svg" alt="icon">
             </a>
-            <a href="#" class="icon">
+            <button class="icon cartBtn">
                <img src="./images/icons/cart.svg" alt="icon">
-            </a>
+            </button>
 
          </div>
       </div>
    </header>
-   <!-- header -->
+   <!-- cart -->
+   <div class="overflow-hidden fixed top-0 right-0 w-full h-full -z-10 opacity-0 cart transition duration-300 flex justify-end">
+      <div class="translate-x-full  transition duration-300 cartSection relative h-full w-full max-w-xl bg-primary shadow-xl">
+         <div class="head p-4 md:p-6 flex justify-between items-center">
+            <button class="closeCart">
+               <img src="./images/icons/times.svg" alt="">
+            </button>
+            <h4 class="text-2xl">Your Cart</h4>
+            <div class="relative">
+               <div
+                  class="absolute -top-1 -right-1 w-4 h-4 bg-red-600 rounded-full flex justify-center items-center text-xs text-white">
+                  2</div>
+               <img src="./images/icons/cartFill.svg" alt="">
+            </div>
+         </div>
+         <div class="items p-4 md:px-6 md:pt-6 flex flex-col gap-4 h-full overflow-auto pb-52">
+            <div class="item grid grid-cols-5 gap-4 items-center">
+               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+               </div>
+               <div class="info col-span-3 flex flex-col justify-between">
+                  <div>
+                     <h4 class="text-xl">Whey Protein</h4>
+                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                  </div>
+                  <div class="flex gap-4 items-end">
+                     <div class="flex gap-2 items-center border border-secondary">
+                        <button class="px-4 py-1 hover:bg-therd/50 c_decrease">-</button>
+                        <span class="text-xl">1</span>
+                        <button class="px-4 py-1 hover:bg-therd/50 c_increase">+</button>
+                     </div>
+                     <div class="remove">
+                        <button class="hover:underline">Remove</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-span-1">
+                  120EGP
+               </div>
+            </div>
+            <div class="item grid grid-cols-5 gap-4 items-center">
+               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+               </div>
+               <div class="info col-span-3 flex flex-col justify-between">
+                  <div>
+                     <h4 class="text-xl">Whey Protein</h4>
+                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                  </div>
+                  <div class="flex gap-4 items-end">
+                     <div class="flex gap-2 items-center border border-secondary">
+                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                        <span class="text-xl">1</span>
+                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                     </div>
+                     <div class="remove">
+                        <button class="hover:underline">Remove</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-span-1">
+                  120EGP
+               </div>
+            </div>
+            <div class="item grid grid-cols-5 gap-4 items-center">
+               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+               </div>
+               <div class="info col-span-3 flex flex-col justify-between">
+                  <div>
+                     <h4 class="text-xl">Whey Protein</h4>
+                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                  </div>
+                  <div class="flex gap-4 items-end">
+                     <div class="flex gap-2 items-center border border-secondary">
+                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                        <span class="text-xl">1</span>
+                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                     </div>
+                     <div class="remove">
+                        <button class="hover:underline">Remove</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-span-1">
+                  120EGP
+               </div>
+            </div>
+            <div class="item grid grid-cols-5 gap-4 items-center">
+               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+               </div>
+               <div class="info col-span-3 flex flex-col justify-between">
+                  <div>
+                     <h4 class="text-xl">Whey Protein</h4>
+                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                  </div>
+                  <div class="flex gap-4 items-end">
+                     <div class="flex gap-2 items-center border border-secondary">
+                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                        <span class="text-xl">1</span>
+                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                     </div>
+                     <div class="remove">
+                        <button class="hover:underline">Remove</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-span-1">
+                  120EGP
+               </div>
+            </div>
+            <div class="item grid grid-cols-5 gap-4 items-center">
+               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+               </div>
+               <div class="info col-span-3 flex flex-col justify-between">
+                  <div>
+                     <h4 class="text-xl">Whey Protein</h4>
+                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                  </div>
+                  <div class="flex gap-4 items-end">
+                     <div class="flex gap-2 items-center border border-secondary">
+                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                        <span class="text-xl">1</span>
+                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                     </div>
+                     <div class="remove">
+                        <button class="hover:underline">Remove</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-span-1">
+                  120EGP
+               </div>
+            </div>
+         </div>
+         <div class="absolute bottom-0 w-full p-6 border-t border-secondary bg-primary mt-[100%]">
+            <button class="bg-secondary text-primary p-4 w-full text-center">
+               Go To Checkout | 240EGP
+            </button>
+         </div>
+      </div>
+   </div>
    <!-- aside -->
-   <aside class="fixed block shadow-lg md:hidden top-0 left-0 w-full h-full z-30 bg-primary pt-20 text-3xl transition duration-500 -translate-x-full">
+   <aside
+      class="fixed block shadow-lg md:hidden top-0 left-0 w-full h-full z-30 bg-primary pt-20 text-3xl transition duration-500 -translate-x-full">
       <button class="absolute top-4 left-8" id="closeaside">
          <img src="./images/icons/times.svg" alt="">
       </button>
@@ -381,7 +525,7 @@
             <div class="swiper-button-prev"></div>
          </div>
          <a href="#"
-            class="py-4 block mt-10 px-12 mx-auto w-fit border hover:text-primary hover:bg-secondary transition hover:shadow-md">See
+            class="py-4 block mt-10 px-12 mx-auto w-fit border hover:text-primary hover:bg-secondary transition hover:shadow-md border-secondary">See
             More</a>
       </div>
    </section>
@@ -592,7 +736,7 @@
             <div class="swiper-button-prev"></div>
          </div>
          <a href="#"
-            class="py-4 block mt-10 px-12 mx-auto w-fit border hover:text-primary hover:bg-secondary transition hover:shadow-md">See
+            class="py-4 block mt-10 px-12 mx-auto w-fit border hover:text-primary hover:bg-secondary transition hover:shadow-md border-secondary">See
             More</a>
       </div>
    </section>
