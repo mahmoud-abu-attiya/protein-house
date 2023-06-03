@@ -41,11 +41,41 @@
          background: #1d0b2f86;
          border-radius: 5px;
       }
+
       @media (max-width: 1024px) {
-         .container{
+         .container {
             width: 100% !important;
             max-width: 100% !important;
          }
+      }
+
+      /* style input radio */
+      input[type="radio"] {
+         appearance: none;
+         background-color: transparent;
+         margin: 0;
+         font: inherit;
+         color: currentColor;
+         width: 1.15em;
+         height: 1.15em;
+         border: 1px solid currentColor;
+         border-radius: 50%;
+         display: grid;
+         place-content: center;
+      }
+
+      input[type="radio"]::before {
+         content: "";
+         width: 0.65em;
+         height: 0.65em;
+         border-radius: 50%;
+         transform: scale(0);
+         transition: 120ms transform ease-in-out;
+         box-shadow: inset 1em 1em #FFD0BF;
+      }
+
+      input[type="radio"]:checked::before {
+         transform: scale(1);
       }
    </style>
 </head>
@@ -63,28 +93,73 @@
             <li class="active">
                <img src="./images/icons/arrowrighto.svg" alt="">
             </li>
-            <li class="">Information</li>
+            <li class="opacity-70">Information</li>
             <li class="active">
                <img src="./images/icons/arrowrighto.svg" alt="">
             </li>
-            <li class="opacity-70">Payment</li>
+            <li class="">Payment</li>
          </ul>
       </nav>
    </header>
    <main class="flex flex-col justify-between min-h-[83vh]">
       <div class="container md:grid md:grid-cols-2">
-         <div class="flex flex-col max-w-lg md:p-8 mx-auto">
-            <h2 class="text-2xl mb-8">Details</h2>
+         <div class="flex flex-col max-w-lg md:p-8 py-4 mx-auto justify-between gap-6">
+            <h2 class="text-2xl md:mb-4">Details</h2>
             <div class="flex flex-col">
-               <div class="grid grid-cols-7">
+               <div class="grid grid-cols-8 items-center">
                   <h4 class="col-span-2">Contact</h4>
-                  <input type="text" class="col-span-4 bg-transparent outline-none" value="username@gmail.com" disabled>
-                  <button class="col-span-1 underline opacity-50 changeValue">Change</button>
+                  <input type="text" class="col-span-5 bg-transparent py-2 px-4 outline-none" value="username@gmail.com"
+                     disabled>
+                  <button class="col-span-1 underline opacity-50 changeValue">
+                     <span class="hidden md:block">Change</span>
+                     <img src="./images/icons/change.svg" alt="" class="block md:hidden w-6 h-6" class="w-6 h-6">
+                  </button>
                </div>
-               <div class="grid grid-cols-7">
+               <div class="grid grid-cols-8 items-center">
                   <h4 class="col-span-2">Ship To </h4>
-                  <input type="text" class="col-span-4 bg-transparent outline-none" value="City, Street, house number" disabled>
-                  <button class="col-span-1 underline opacity-50 changeValue">Change</button>
+                  <input type="text" class="col-span-5 bg-transparent py-2 px-4 outline-none"
+                     value="City, Street, house number" disabled>
+                  <button class="col-span-1 underline opacity-50 changeValue">
+                     <span class="hidden md:block">Change</span>
+                     <img src="./images/icons/change.svg" alt="" class="block md:hidden w-6 h-6" class="w-6 h-6">
+                  </button>
+               </div>
+            </div>
+            <h2 class="text-2xl md:mb-4">Payment</h2>
+            <div class="flex flex-col border border-secondary/75">
+               <label class="p-6 border-b border-secondary/75 flex gap-4 items-center">
+                  <input type="radio" name="payment" class="" checked>
+                  <div class="flex gap-4 items-center">
+                     <img src="./images/icons/cash.svg" alt="">
+                     <span>Cash</span>
+                  </div>
+               </label>
+               <label class="p-6 flex gap-4 items-center">
+                  <input type="radio" name="payment" class="">
+                  <div class="flex gap-4 items-center">
+                     <img src="./images/icons/online.svg" alt="">
+                     <span>Online</span>
+                  </div>
+            </div>
+            <button class="p-4 bg-secondary text-primary hidden md:block">Pay Now</button>
+            <div class="fixed bottom-0 left-0 w-full flex md:hidden flex-col bg-primary border-t border-secondary">
+               <div class="p-4 border-y border-secondary">
+                  <div class="flex justify-between">
+                     <div class="">Subtotal</div>
+                     <div class="">120EGP</div>
+                  </div>
+                  <div class="flex justify-between">
+                     <div class="">Shipping</div>
+                     <div class="">Calculated At Next Step</div>
+                  </div>
+                  <hr class="bg-secondary border-none h-[1px] my-4">
+                  <div class="flex justify-between">
+                     <div class="">Total</div>
+                     <div class="">1200EGP</div>
+                  </div>
+               </div>
+               <div class="p-4">
+                  <button class="p-4 bg-secondary text-primary w-full">Pay Now</button>
                </div>
             </div>
          </div>
@@ -186,13 +261,26 @@
          btn.onclick = increase;
       });
 
+
+      // handle change inforamtion
       const changeValue = document.querySelectorAll(".changeValue");
       changeValue.forEach((btn) => {
          btn.onclick = (e) => {
-            let input = e.target.parentElement.querySelector("input");
-            input.disabled = false;
-            input.focus();
-            e.target.innerText = "Save";
+            const input = btn.parentElement.querySelector("input");
+            const span = btn.querySelector("span");
+            const img = btn.querySelector("img");
+            if (span.innerText == "Change") {
+               span.innerText = "Save";
+               input.disabled = false;
+               input.focus();
+               input.style.backgroundColor = "#593B5B"
+               img.src = "./images/icons/check.svg";
+            } else {
+               span.innerText = "Change";
+               input.disabled = true;
+               input.style.backgroundColor = "transparent";
+               img.src = "./images/icons/change.svg";
+            }
          };
       });
    </script>
