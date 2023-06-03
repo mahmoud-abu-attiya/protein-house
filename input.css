@@ -50,7 +50,7 @@ header .icon{
    overflow: hidden;
 }
 .dropdown.open > .absolute{
-   max-height: 500px;
+   max-height: 600px;
    padding: 1rem;
    @apply shadow-lg;
 }
