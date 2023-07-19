@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="/dist/output.css">
+   <!-- Link Swiper's CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+   <!-- Demo styles -->
+   <style>
+      .swiper {
+         height: 100%;
+      }
+
+      .mySwiper .swiper-slide,
+      .mySwiper2,
+      .mySwiper3 {
+         border: 1px solid;
+         @apply border-secondary;
+      }
+
+      .mySwiper .swiper-slide img,
+      .mySwiper2 .swiper-slide img,
+      .mySwiper3 .swiper-slide img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+
+      .mySwiper,
+      .mySwiper2,
+      .mySwiper3 {
+         width: 100%;
+         height: 445px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .swiper-slide {
+         background-size: cover;
+         background-position: center;
+      }
+
+      .mySwiper2 {
+         width: 100%;
+      }
+
+      .mySwiper .swiper-slide {
+         opacity: 0.4;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+         opacity: 1;
+      }
+
+      .swiper.mySwiper3 {
+         height: 360px;
+      }
+
+      .swiper.mySwiper3 .swiper-slide {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .swiper.mySwiper3 img {
+         width: 60%;
+         height: 60%;
+      }
+
+      /*/////////////////////////*/
+      .mySwiper4 {
+         width: 100%;
+         height: 100%;
+      }
+
+      .mySwiper4 .swiper-slide {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .mySwiper4 .swiper-button-next,
+      .mySwiper4 .swiper-button-prev {
+         color: #FFD0BF !important;
+      }
+
+      .mySwiper4 .swiper-button-next::after,
+      .mySwiper4 .swiper-button-prev::after {
+         font-size: 30px !important;
+      }
+
+      @media (max-width: 767px) {
+
+         .swiper-button-next,
+         .swiper-button-prev {
+            display: none;
+         }
+      }
+
+      input::placeholder, textarea::placeholder {
+         /* Chrome, Firefox, Opera, Safari 10.1+ */
+         color: #ffd0bf8a;
+         opacity: 1;
+         /* Firefox */
+      }
+
+      input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+         /* Internet Explorer 10-11 */
+         color: #ffd0bf8a;
+      }
+
+      input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+         /* Microsoft Edge */
+         color: #ffd0bf8a;
+      }
+      .reviewForm{
+         max-height: 0;
+         padding: 0;
+         overflow: hidden;
+         transition: all 0.7s ease-in-out;
+      }
+      .reviewForm.showForm{
+         max-height: 1000px;
+         padding: 2rem 0;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header -->
+   <header class="Vegawanty_font border-b z-20 bg-primary fixed w-full border-secondary py-4 md:py-0">
+      <div class="container flex justify-between items-center">
+         <div class="md:hidden flex items-center gap-4">
+            <button id="opemaside">
+               <img src="./images/icons/bars.svg" alt="icon" class="icon">
+            </button>
+            <button>
+               <img src="./images/icons/search.svg" alt="icon" class="icon">
+            </button>
+         </div>
+         <div class="logo flex gap-2 md:gap-4 items-center">
+            <img src="./images/logo.svg" alt="logo">
+            <h1 class="text-xl md:text-2xl">Protein house</h1>
+         </div>
+         <nav class="hidden md:block">
+            <ul class="flex items-center gap-8">
+               <li class="py-8">
+                  <a href="/">Home</a>
+               </li>
+               <li class="py-8 border-b-4 border-secondary">
+                  <a href="shop.html">Shop</a>
+               </li>
+               <li class="py-8">
+                  <a href="/">My routine</a>
+               </li>
+               <li class="py-8">
+                  <a href="/">About</a>
+               </li>
+            </ul>
+         </nav>
+         <div class="btns flex gap-4 items-center">
+            <a href="#" class="icon hidden md:block">
+               <img src="./images/icons/search.svg" alt="icon">
+            </a>
+            <a href="#" class="icon">
+               <img src="./images/icons/heart.svg" alt="icon">
+            </a>
+            <button class="icon cartBtn">
+               <img src="./images/icons/cart.svg" alt="icon">
+            </button>
+         </div>
+      </div>
+   </header>
+      <!-- cart -->
+      <div class="overflow-hidden fixed top-0 right-0 w-full h-full -z-10 opacity-0 cart transition duration-300 flex justify-end">
+         <div class="translate-x-full  transition duration-300 cartSection relative h-full w-full max-w-xl bg-primary shadow-xl">
+            <div class="head p-4 md:p-6 flex justify-between items-center">
+               <button class="closeCart">
+                  <img src="./images/icons/times.svg" alt="">
+               </button>
+               <h4 class="text-2xl">Your Cart</h4>
+               <div class="relative">
+                  <div
+                     class="absolute -top-1 -right-1 w-4 h-4 bg-red-600 rounded-full flex justify-center items-center text-xs text-white">
+                     2</div>
+                  <img src="./images/icons/cartFill.svg" alt="">
+               </div>
+            </div>
+            <div class="items p-4 md:px-6 md:pt-6 flex flex-col gap-4 h-full overflow-auto pb-52">
+               <div class="item grid grid-cols-5 gap-4 items-center">
+                  <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                     <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                  </div>
+                  <div class="info col-span-3 flex flex-col justify-between">
+                     <div>
+                        <h4 class="text-xl">Whey Protein</h4>
+                        <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                     </div>
+                     <div class="flex gap-4 items-end">
+                        <div class="flex gap-2 items-center border border-secondary">
+                           <button class="px-4 py-1 hover:bg-therd/50 c_decrease">-</button>
+                           <span class="text-xl">1</span>
+                           <button class="px-4 py-1 hover:bg-therd/50 c_increase">+</button>
+                        </div>
+                        <div class="remove">
+                           <button class="hover:underline">Remove</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1">
+                     120EGP
+                  </div>
+               </div>
+               <div class="item grid grid-cols-5 gap-4 items-center">
+                  <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                     <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                  </div>
+                  <div class="info col-span-3 flex flex-col justify-between">
+                     <div>
+                        <h4 class="text-xl">Whey Protein</h4>
+                        <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                     </div>
+                     <div class="flex gap-4 items-end">
+                        <div class="flex gap-2 items-center border border-secondary">
+                           <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                           <span class="text-xl">1</span>
+                           <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                        </div>
+                        <div class="remove">
+                           <button class="hover:underline">Remove</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1">
+                     120EGP
+                  </div>
+               </div>
+               <div class="item grid grid-cols-5 gap-4 items-center">
+                  <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                     <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                  </div>
+                  <div class="info col-span-3 flex flex-col justify-between">
+                     <div>
+                        <h4 class="text-xl">Whey Protein</h4>
+                        <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                     </div>
+                     <div class="flex gap-4 items-end">
+                        <div class="flex gap-2 items-center border border-secondary">
+                           <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                           <span class="text-xl">1</span>
+                           <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                        </div>
+                        <div class="remove">
+                           <button class="hover:underline">Remove</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1">
+                     120EGP
+                  </div>
+               </div>
+               <div class="item grid grid-cols-5 gap-4 items-center">
+                  <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                     <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                  </div>
+                  <div class="info col-span-3 flex flex-col justify-between">
+                     <div>
+                        <h4 class="text-xl">Whey Protein</h4>
+                        <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                     </div>
+                     <div class="flex gap-4 items-end">
+                        <div class="flex gap-2 items-center border border-secondary">
+                           <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                           <span class="text-xl">1</span>
+                           <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                        </div>
+                        <div class="remove">
+                           <button class="hover:underline">Remove</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1">
+                     120EGP
+                  </div>
+               </div>
+               <div class="item grid grid-cols-5 gap-4 items-center">
+                  <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
+                     <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                  </div>
+                  <div class="info col-span-3 flex flex-col justify-between">
+                     <div>
+                        <h4 class="text-xl">Whey Protein</h4>
+                        <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                     </div>
+                     <div class="flex gap-4 items-end">
+                        <div class="flex gap-2 items-center border border-secondary">
+                           <button class="px-4 py-1 hover:bg-therd/50">-</button>
+                           <span class="text-xl">1</span>
+                           <button class="px-4 py-1 hover:bg-therd/50">+</button>
+                        </div>
+                        <div class="remove">
+                           <button class="hover:underline">Remove</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-span-1">
+                     120EGP
+                  </div>
+               </div>
+            </div>
+            <div class="absolute bottom-0 w-full p-6 border-t border-secondary bg-primary mt-[100%]">
+               <button class="bg-secondary text-primary p-4 w-full text-center">
+                  Go To Checkout | 240EGP
+               </button>
+            </div>
+         </div>
+      </div>
+   <!-- aside -->
+   <aside
+      class="fixed block shadow-lg md:hidden top-0 left-0 w-full h-full z-30 bg-primary pt-20 text-3xl transition duration-500 -translate-x-full">
+      <button class="absolute top-4 left-8" id="closeaside">
+         <img src="./images/icons/times.svg" alt="">
+      </button>
+      <div class="container px-8">
+         <ul class="flex flex-col gap-4">
+            <li>
+               <a href="#">Home</a>
+            </li>
+            <li>
+               <a href="#">Shop</a>
+            </li>
+            <li>
+               <a href="#">My routine</a>
+            </li>
+            <li>
+               <a href="#">About</a>
+            </li>
+         </ul>
+         <hr class="bg-secondary my-10">
+         <ul class="flex flex-col gap-4">
+            <li>
+               <a href="#">Brands</a>
+            </li>
+            <li>
+               <a href="#">Best Seller</a>
+            </li>
+            <li>
+               <a href="#">Offers</a>
+            </li>
+         </ul>
+      </div>
+   </aside>
+   <main>
+      <!-- product in desctop -->
+      <section class="hidden md:block pt-36">
+         <div class="container grid grid-cols-2 gap-4">
+            <div class="gap-4 grid grid-cols-10 grid-rows-1">
+               <div thumbsSlider="" class="swiper mySwiper col-span-2 row-span-1">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <img src="./images/product.png" />
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper col-span-8 mySwiper2">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <img src="./images/product.png" />
+                     </div>
+                     <div class="swiper-slide">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <img src="./images/product.png" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="product-info flex flex-col gap-4">
+               <h2 class="text-3xl mb-4">Product Name</h2>
+               <div class="rating flex gap-4">
+                  <div class="flex">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                  </div>
+                  Rating
+               </div>
+               <span class="price">120EGP</span>
+               <p class="desc text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem suscipit
+                  velit
+                  necessitatibus illo reiciendis, quia obcaecati nostrum odit aspernatur quae?</p>
+               <ul class="flex gap-4">
+                  <li class="px-3 py-1 text-sm cursor-pointer border border-secondary">300ML</li>
+                  <li class="px-3 py-1 text-sm cursor-pointer border border-secondary">350ML</li>
+                  <li class="px-3 py-1 text-sm cursor-pointer border border-secondary">500ML</li>
+               </ul>
+               <button class="addtocart bg-secondary text-primary p-3 text-sm uppercase">
+                  add to cart | 40EGP
+               </button>
+               <button class="addtocart border border-secondary p-3 text-sm uppercase">
+                  go to checkout
+               </button>
+               <div class="hairtype flex flex-col gap-4 mt-4">
+                  HAIR TYPE
+                  <span class="text-sm">Curly Hair</span>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- product in mobile -->
+      <section class="md:hidden pt-28">
+         <div class="container">
+            <h2 class="text-3xl w-fit mx-auto mb-8">Product Name</h2>
+            <div class="swiper mySwiper3">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <img src="./images/product.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="./images/product.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                     <img src="./images/product.png" alt="">
+                  </div>
+               </div>
+            </div>
+            <div class="flex flex-col gap-4 py-8">
+               <div class="">120EGP</div>
+               <div class="rating flex gap-8">
+                  Rating
+                  <div class="flex">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                  </div>
+               </div>
+               <ul class="flex gap-4">
+                  <li class="px-3 py-1 text-sm cursor-pointer border border-secondary">300ML</li>
+                  <li class="px-3 py-1 text-sm cursor-pointer border border-secondary">350ML</li>
+                  <li class="px-3 py-1 text-sm cursor-pointer border border-secondary">500ML</li>
+               </ul>
+            </div>
+         </div>
+      </section>
+      <section class="pt-24">
+         <div class="container">
+            <h2 class="text-3xl md:text-5xl w-fit mx-auto mb-14">Complementary Products</h2>
+            <div class="swiper mySwiper4">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+            </div>
+         </div>
+      </section>
+      <section class="pt-24">
+         <div class="container text-center max-w-2xl">
+            <div class="flex flex-col items-center gap-6 border-b border-secondary pb-6">
+               <h2 class="text-3xl md:text-5xl">Share Your Review</h2>
+               <p>Your opinion matter Share it with us</p>
+               <button class="px-8 py-2 bg-secondary text-primary orf">Write A Review</button>
+            </div>
+            <!-- form -->
+            <form action="" class="text-start py-8 border-b border-secondary flex flex-col gap-6 reviewForm">
+               <div class="flex flex-col gap-3">
+                  <label class="text-xl" for="email">Email</label>
+                  <input class="bg-primary text-secondary border border-secondary p-3 outline-none" placeholder="Email" type="email"
+                     name="email" id="email">
+               </div>
+               <div class="flex flex-col gap-3">
+                  <span class="text-xl">Review</span>
+                  <div class="rateStars">
+                     <button type="button" class="star w-6 h-6">
+                        <img src="./images/icons/rateStar.png" alt="" style="filter: invert(98%) sepia(56%) saturate(4005%) hue-rotate(292deg) brightness(105%) contrast(137%);" class="object-cover w-full">
+                     </button>
+                     <button type="button" class="star w-6 h-6">
+                        <img src="./images/icons/rateStar.png" alt="" class="object-cover w-full">
+                     </button>
+                     <button type="button" class="star w-6 h-6">
+                        <img src="./images/icons/rateStar.png" alt="" class="object-cover w-full">
+                     </button>
+                     <button type="button" class="star w-6 h-6">
+                        <img src="./images/icons/rateStar.png" alt="" class="object-cover w-full">
+                     </button>
+                     <button type="button" class="star w-6 h-6">
+                        <img src="./images/icons/rateStar.png" alt="" class="object-cover w-full">
+                     </button>
+                  </div>
+               </div>
+               <div class="flex flex-col gap-3">
+                  <label class="text-xl" for="title">Title</label>
+                  <input class="bg-primary text-secondary border border-secondary p-3 outline-none" placeholder="Give your opinion a title" type="text" name="title" id="title">
+               </div>
+               <div class="flex flex-col gap-3">
+                  <label class="text-xl" for="message">Message</label>
+                  <!-- <input type="email" name="message" id="message"> -->
+                  <textarea class="bg-primary text-secondary border border-secondary p-3 outline-none" placeholder="Write your opinion" name="message" id="message"
+                     cols="30" rows="7"></textarea>
+               </div>
+               <input type="submit" class="px-8 py-2 bg-secondary text-primary" value="Submit" />
+            </form>
+            <div class="flex flex-col gap-6 text-start pt-8">
+               <div class="flex gap-8">
+                  <div class="flex">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                     <img src="./images/icons/star.svg" alt="">
+                  </div>
+                  <h3 class="text-2xl">Title</h3>
+               </div>
+               <div class="desc">Lorem ipsum dolor sit amet consectetur. At in mauris tellus tristique tincidunt.
+                  Ullamcorper adipiscing dictum egestas erat diam id sed porttitor. Vel ut amet ultrices nulla velit
+                  phasellus.</div>
+               <div class="data">07/01/2023</div>
+            </div>
+         </div>
+      </section>
+      <section class="py-24">
+         <div class="container">
+            <h2 class="text-3xl md:text-5xl w-fit mx-auto mb-14">Similar Products</h2>
+            <div class="swiper mySwiper4">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="relative">
+                        <button class="absolute top-4 right-4 z-10">
+                           <img src="./images/icons/heart.svg" alt="">
+                        </button>
+                        <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                           <div
+                              class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                              <h3 class="text-xl">Product name</h3>
+                              <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                              <span>120EGP</span>
+                              <div class="rating flex items-center gap-4 mx-auto w-fit">
+                                 <div class="flex items-center">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                    <img src="./images/icons/star.svg" alt="star">
+                                 </div>
+                                 4.5
+                              </div>
+                           </div>
+                           <img src="./images/product.png" alt="product" class="mx-auto">
+                           <h3 class="text-xl">Product name</h3>
+                           <p class="">Lorem ipsum dolor sit amet conse...</p>
+                           <span>120EGP</span>
+                           <div class="rating flex items-center gap-4 mx-auto w-fit">
+                              <div class="flex items-center">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                                 <img src="./images/icons/star.svg" alt="star">
+                              </div>
+                              4.5
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+            </div>
+         </div>
+      </section>
+      <div class="sticky bottom-0 left-0 border-t border-secondary bg-primary z-20 md:hidden">
+         <div class="container py-4 flex gap-4">
+            <button class="w-16 flex items-center justify-center">
+               <img src="./images/icons/heart.svg" alt="">
+            </button>
+            <button class="p-4 uppercase bg-secondary text-primary grow">
+               add to cart
+            </button>
+         </div>
+      </div>
+   </main>
+   <script src="main.js"></script>
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+      var swiper = new Swiper(".mySwiper", {
+         spaceBetween: 20,
+         slidesPerView: 4,
+         freeMode: true,
+         direction: "vertical",
+         watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+         spaceBetween: 10,
+         thumbs: {
+            swiper: swiper,
+         },
+      });
+      var swiper = new Swiper(".mySwiper3", {
+         spaceBetween: 20,
+      });
+      var swiper = new Swiper(".mySwiper4", {
+         slidesPerView: 2,
+         spaceBetween: 20,
+         loop: true,
+         breakpoints: {
+            768: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+               navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+               },
+            },
+         },
+      });
+
+      // toggle reviews form
+      const toggleReview = document.querySelector(".orf");
+      const reviewForm = document.querySelector(".reviewForm");
+      toggleReview.addEventListener("click", () => {
+         if(toggleReview.innerHTML.startsWith("W")){
+            toggleReview.innerHTML = "Cancel";
+            reviewForm.classList.toggle("showForm");
+         } else {
+            toggleReview.innerHTML = "Write a review";
+            reviewForm.classList.toggle("showForm");
+         }
+      });
+      
+      // handle rate stars
+      const rateStars = document.querySelectorAll(".rateStars button");
+      let rates = [];
+      for(let i = 0; i < rateStars.length; i++){
+         rates.push(rateStars[i]);
+         rateStars[i].addEventListener("click", () => {
+            rateStars.forEach((rate) => {
+               rate.querySelector("img").style.filter = "none";
+            });
+            for(let j = 0; j < rates.slice(0, i + 1).length; j++){
+               rates[j].querySelector("img").style.filter = "invert(98%) sepia(56%) saturate(4005%) hue-rotate(292deg) brightness(105%) contrast(137%)";
+            }
+         });
+      }
+   </script>
+</body>
+
+</html>
