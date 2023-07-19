@@ -7,56 +7,67 @@
    <title>Document</title>
    <link rel="stylesheet" href="/dist/output.css">
    <style>
+      /* change */
+      @font-face {
+         font-family: "ElMessiri-Regular";
+         src: url('../fonts/ElMessiri-Regular.ttf');
+      }
+
+      * {
+         font-family: 'ElMessiri-Regular', sans-serif !important;
+      }
+
+      /* change */
       .active-section {
          opacity: 1;
       }
    </style>
 </head>
 
-<body>
+<body dir="rtl"> <!-- change -->
    <!-- header -->
    <header class="Vegawanty_font border-b z-20 bg-primary fixed w-full border-secondary py-4 md:py-0">
       <div class="container flex justify-between items-center">
          <div class="md:hidden flex items-center gap-4">
             <button id="opemaside">
-               <img src="./images/icons/bars.svg" alt="icon" class="icon">
+               <img src="../images/icons/bars.svg" alt="icon" class="icon">
             </button>
             <button>
-               <img src="./images/icons/search.svg" alt="icon" class="icon">
+               <img src="../images/icons/search.svg" alt="icon" class="icon">
             </button>
          </div>
          <div class="logo flex gap-2 md:gap-4 items-center">
-            <img src="./images/logo.svg" alt="logo">
-            <h1 class="text-xl md:text-2xl">Protein house</h1>
+            <img src="../images/logo.svg" alt="logo">
+            <h1 class="text-xl md:text-2xl">بيت البروتين</h1> <!-- change -->
          </div>
          <nav class="hidden md:block">
             <ul class="flex items-center gap-8">
                <li class="py-8 border-b-4 border-secondary">
-                  <a href="/">Home</a>
+                  <a href="/">الرئيسية</a> <!-- change -->
                </li>
                <li class="py-8">
-                  <a href="shop.html">Shop</a>
+                  <a href="shop.html">التسوق</a> <!-- change -->
                </li>
-               <li class="py-8">
+               <!-- <li class="py-8">
                   <a href="/">My routine</a>
-               </li>
+               </li> -->
                <li class="py-8">
-                  <a href="/">About</a>
+                  <a href="/">عنا</a> <!-- change -->
                </li>
             </ul>
          </nav>
          <div class="btns flex gap-4 items-center">
             <a href="#" class="icon hidden md:block">
-               <img src="./images/icons/search.svg" alt="icon">
+               <img src="../images/icons/search.svg" alt="icon">
             </a>
-            <a href="#">
-               <img src="./images/icons/profile-fill.svg" alt="icon">
-            </a>
+            <!-- <a href="#">
+               <img src="../images/icons/profile.svg" alt="icon">
+            </a> -->
             <a href="#" class="icon">
-               <img src="./images/icons/heart.svg" alt="icon">
+               <img src="../images/icons/heart.svg" alt="icon">
             </a>
             <button class="icon cartBtn">
-               <img src="./images/icons/cart.svg" alt="icon">
+               <img src="../images/icons/cart.svg" alt="icon">
             </button>
 
          </div>
@@ -69,25 +80,25 @@
          class="translate-x-full  transition duration-300 cartSection relative h-full w-full max-w-xl bg-primary shadow-xl">
          <div class="head p-4 md:p-6 flex justify-between items-center">
             <button class="closeCart">
-               <img src="./images/icons/times.svg" alt="">
+               <img src="../images/icons/times.svg" alt="">
             </button>
-            <h4 class="text-2xl">Your Cart</h4>
+            <h4 class="text-2xl">عربتك</h4> <!-- change -->
             <div class="relative">
                <div
                   class="absolute -top-1 -right-1 w-4 h-4 bg-red-600 rounded-full flex justify-center items-center text-xs text-white">
                   2</div>
-               <img src="./images/icons/cartFill.svg" alt="">
+               <img src="../images/icons/cartFill.svg" alt="">
             </div>
          </div>
          <div class="items p-4 md:px-6 md:pt-6 flex flex-col gap-4 h-full overflow-auto pb-52">
             <div class="item grid grid-cols-5 gap-4 items-center">
                <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                  <img src="../images/product.png" alt="" class="w-full h-full object-contain">
                </div>
                <div class="info col-span-3 flex flex-col justify-between">
                   <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                     <h4 class="text-xl">اسم المنتج</h4> <!-- change -->
+                     <p class="text-sm my-4">وصف المنتج وصف المنتج وصف المنتج وصف المنتج</p> <!-- change -->
                   </div>
                   <div class="flex gap-4 items-end">
                      <div class="flex gap-2 items-center border border-secondary">
@@ -96,103 +107,7 @@
                         <button class="px-4 py-1 hover:bg-therd/50 c_increase">+</button>
                      </div>
                      <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
+                        <button class="hover:underline">اذالة</button> <!-- change -->
                      </div>
                   </div>
                </div>
@@ -203,7 +118,7 @@
          </div>
          <div class="absolute bottom-0 w-full p-6 border-t border-secondary bg-primary mt-[100%]">
             <button class="bg-secondary text-primary p-4 w-full text-center">
-               Go To Checkout | 240EGP
+               خط الدفع | 240EGP <!-- change -->
             </button>
          </div>
       </div>
@@ -212,33 +127,33 @@
    <aside
       class="fixed block shadow-lg md:hidden top-0 left-0 w-full h-full z-30 bg-primary pt-20 text-3xl transition duration-500 -translate-x-full">
       <button class="absolute top-4 left-8" id="closeaside">
-         <img src="./images/icons/times.svg" alt="">
+         <img src="../images/icons/times.svg" alt="">
       </button>
       <div class="container px-8">
          <ul class="flex flex-col gap-4">
             <li>
-               <a href="#">Home</a>
+               <a href="#">الرئيسية</a> <!-- change -->
             </li>
             <li>
-               <a href="#">Shop</a>
+               <a href="#">التسوق</a> <!-- change -->
             </li>
             <li>
-               <a href="#">My routine</a>
+               <a href="#">روتيني</a> <!-- change -->
             </li>
             <li>
-               <a href="#">About</a>
+               <a href="#">معلومات عنا</a> <!-- change -->
             </li>
          </ul>
          <hr class="bg-secondary my-10">
          <ul class="flex flex-col gap-4">
             <li>
-               <a href="#">Brands</a>
+               <a href="#">العلامات التجارية</a> <!-- change -->
             </li>
             <li>
-               <a href="#">Best Seller</a>
+               <a href="#">الأكثر مبيعًا</a> <!-- change -->
             </li>
             <li>
-               <a href="#">Offers</a>
+               <a href="#">عروض</a> <!-- change -->
             </li>
          </ul>
       </div>
@@ -246,46 +161,45 @@
    <!-- ////////////////////////// Personal /////////////////////////////////// -->
    <div class="h-screen min-h-[620px] py-28 flex md:items-center">
       <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-14">
-         <div class="hidden md:block border-r border-secondary">
+         <div class="hidden md:block border-l border-secondary"> <!-- change border-r to border-l -->
             <div class="flex items-center gap-4 text-xl mb-10">
                <span class="block bg-secondary w-6 h-[0.3rem]"></span>
-               My Dashboard
+               لوحة القيادة   <!-- change -->
             </div>
             <ul class="flex flex-col gap-4">
                <li class="underline opacity-50 active-section">
-                  <a href="">Personal Information</a>
+                  <a href="">معلومات شخصية</a> <!-- change -->
                </li>
-               <li class="underline opacity-50">
-                  <a href="">Wishlist</a>
+               <li class="underline opacity-50">  
+                  <a href="">قائمة الرغبات</a> <!-- change -->
                </li>
-               <li class="underline opacity-50">
-                  <a href="">My address</a>
+               <li class="underline opacity-50"> 
+                  <a href="">عنواني</a> <!-- change -->
                </li>
             </ul>
-            <a href="/" class="mt-10 block opacity-50">Log out</a>
+            <a href="/" class="mt-10 block opacity-50">تسجيل خروج</a> <!-- change -->
          </div>
          <div class="md:col-span-3">
-            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">Personal
-               Information</h1>
+            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">معلومات شخصية</h1>
             <ul class="md:hidden flex gap-5 overflow-x-scroll py-4 justify-center">
                <li class="underline whitespace-nowrap opacity-50 active-section">
-                  <a href="">Personal Information</a>
+                  <a href="">معلومات شخصية</a> <!-- change -->
                </li>
                <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Wishlist</a>
+                  <a href="">قائمة الرغبات</a> <!-- change -->
                </li>
                <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">My address</a>
+                  <a href="">عنواني</a> <!-- change -->
                </li>
                <li class="underline opacity-50">
-                  <a href="">Log out</a>
+                  <a href="">تسجيل خروج</a> <!-- change -->
                </li>
             </ul>
             <div class="flex flex-col gap-4 py-14">
-               <div>Contact Information</div>
+               <div>معلومات الاتصال</div>
                <div class="text-2xl">Mahmoud Abu-Attiya</div>
                <div>mahmoud.abuattiya@gmail.com</div>
-               <a href="#" class="underline opacity-50">Change Password</a>
+               <a href="#" class="underline opacity-50">تغيير كلمة المرور</a>
             </div>
          </div>
 
@@ -294,45 +208,44 @@
    <!-- ////////////////////////// WishList /////////////////////////////////// -->
    <div class="min-h-[620px] py-28 flex md:items-center">
       <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-14">
-         <div class="hidden md:block border-r border-secondary">
+         <div class="hidden md:block border-l border-secondary"> <!-- change border-r to border-l -->
             <div class="flex items-center gap-4 text-xl mb-10">
                <span class="block bg-secondary w-6 h-[0.3rem]"></span>
-               My Dashboard
+               لوحة القيادة   <!-- change -->
             </div>
             <ul class="flex flex-col gap-4">
-               <li class="underline opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
                <li class="underline opacity-50 active-section">
-                  <a href="">Wishlist</a>
+                  <a href="">معلومات شخصية</a> <!-- change -->
                </li>
-               <li class="underline opacity-50">
-                  <a href="">My address</a>
+               <li class="underline opacity-50">  
+                  <a href="">قائمة الرغبات</a> <!-- change -->
+               </li>
+               <li class="underline opacity-50"> 
+                  <a href="">عنواني</a> <!-- change -->
                </li>
             </ul>
-            <a href="/" class="mt-10 block opacity-50">Log out</a>
+            <a href="/" class="mt-10 block opacity-50">تسجيل خروج</a> <!-- change -->
          </div>
          <div class="md:col-span-3">
-            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">Wishlist
-            </h1>
+            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">قائمة الرغبات</h1>
             <ul class="md:hidden flex gap-5 overflow-x-scroll py-4 justify-center">
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
                <li class="underline whitespace-nowrap opacity-50 active-section">
-                  <a href="">Wishlist</a>
+                  <a href="">معلومات شخصية</a> <!-- change -->
                </li>
                <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">My address</a>
+                  <a href="">قائمة الرغبات</a> <!-- change -->
+               </li>
+               <li class="underline whitespace-nowrap opacity-50">
+                  <a href="">عنواني</a> <!-- change -->
                </li>
                <li class="underline opacity-50">
-                  <a href="">Log out</a>
+                  <a href="">تسجيل خروج</a> <!-- change -->
                </li>
             </ul>
             <div class="grid grid-cols-2 md:grid-cols-3">
                <div class="relative">
                   <button class="absolute top-4 right-4 z-10">
-                     <img src="./images/icons/heart.svg" alt="">
+                     <img src="../images/icons/heart.svg" alt="">
                   </button>
                   <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
                      <div
@@ -342,26 +255,26 @@
                         <span>120EGP</span>
                         <div class="rating flex items-center gap-4 mx-auto w-fit">
                            <div class="flex items-center">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
                            </div>
                            4.5
                         </div>
                      </div>
-                     <img src="./images/product.png" alt="product" class="mx-auto">
+                     <img src="../images/product.png" alt="product" class="mx-auto">
                      <h3 class="text-xl">Product name</h3>
                      <p class="">Lorem ipsum dolor sit amet conse...</p>
                      <span>120EGP</span>
                      <div class="rating flex items-center gap-4 mx-auto w-fit">
                         <div class="flex items-center">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
                         </div>
                         4.5
                      </div>
@@ -369,7 +282,7 @@
                </div>
                <div class="relative">
                   <button class="absolute top-4 right-4 z-10">
-                     <img src="./images/icons/heart.svg" alt="">
+                     <img src="../images/icons/heart.svg" alt="">
                   </button>
                   <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
                      <div
@@ -379,26 +292,26 @@
                         <span>120EGP</span>
                         <div class="rating flex items-center gap-4 mx-auto w-fit">
                            <div class="flex items-center">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
                            </div>
                            4.5
                         </div>
                      </div>
-                     <img src="./images/product.png" alt="product" class="mx-auto">
+                     <img src="../images/product.png" alt="product" class="mx-auto">
                      <h3 class="text-xl">Product name</h3>
                      <p class="">Lorem ipsum dolor sit amet conse...</p>
                      <span>120EGP</span>
                      <div class="rating flex items-center gap-4 mx-auto w-fit">
                         <div class="flex items-center">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
                         </div>
                         4.5
                      </div>
@@ -406,7 +319,7 @@
                </div>
                <div class="relative">
                   <button class="absolute top-4 right-4 z-10">
-                     <img src="./images/icons/heart.svg" alt="">
+                     <img src="../images/icons/heart.svg" alt="">
                   </button>
                   <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
                      <div
@@ -416,26 +329,26 @@
                         <span>120EGP</span>
                         <div class="rating flex items-center gap-4 mx-auto w-fit">
                            <div class="flex items-center">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
+                              <img src="../images/icons/star.svg" alt="star">
                            </div>
                            4.5
                         </div>
                      </div>
-                     <img src="./images/product.png" alt="product" class="mx-auto">
+                     <img src="../images/product.png" alt="product" class="mx-auto">
                      <h3 class="text-xl">Product name</h3>
                      <p class="">Lorem ipsum dolor sit amet conse...</p>
                      <span>120EGP</span>
                      <div class="rating flex items-center gap-4 mx-auto w-fit">
                         <div class="flex items-center">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
+                           <img src="../images/icons/star.svg" alt="star">
                         </div>
                         4.5
                      </div>
@@ -449,39 +362,38 @@
    <!-- ////////////////////////// Address /////////////////////////////////// -->
    <div class="h-screen min-h-[620px] py-28 flex md:items-center">
       <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-14">
-         <div class="hidden md:block border-r border-secondary">
+         <div class="hidden md:block border-l border-secondary"> <!-- change border-r to border-l -->
             <div class="flex items-center gap-4 text-xl mb-10">
                <span class="block bg-secondary w-6 h-[0.3rem]"></span>
-               My Dashboard
+               لوحة القيادة   <!-- change -->
             </div>
             <ul class="flex flex-col gap-4">
-               <li class="underline opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
                <li class="underline opacity-50 active-section">
-                  <a href="">My address</a>
+                  <a href="">معلومات شخصية</a> <!-- change -->
+               </li>
+               <li class="underline opacity-50">  
+                  <a href="">قائمة الرغبات</a> <!-- change -->
+               </li>
+               <li class="underline opacity-50"> 
+                  <a href="">عنواني</a> <!-- change -->
                </li>
             </ul>
-            <a href="/" class="mt-10 block opacity-50">Log out</a>
+            <a href="/" class="mt-10 block opacity-50">تسجيل خروج</a> <!-- change -->
          </div>
          <div class="md:col-span-3">
-            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">My address
-            </h1>
+            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">عنواني</h1>
             <ul class="md:hidden flex gap-5 overflow-x-scroll py-4 justify-center">
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
                <li class="underline whitespace-nowrap opacity-50 active-section">
-                  <a href="">My address</a>
+                  <a href="">معلومات شخصية</a> <!-- change -->
+               </li>
+               <li class="underline whitespace-nowrap opacity-50">
+                  <a href="">قائمة الرغبات</a> <!-- change -->
+               </li>
+               <li class="underline whitespace-nowrap opacity-50">
+                  <a href="">عنواني</a> <!-- change -->
                </li>
                <li class="underline opacity-50">
-                  <a href="">Log out</a>
+                  <a href="">تسجيل خروج</a> <!-- change -->
                </li>
             </ul>
             <div class="flex flex-col gap-4 py-14">
@@ -494,69 +406,7 @@
 
       </div>
    </div>
-   <!-- Footer -->
-   <footer class="border-t border-secondary py-8">
-      <div class="container">
-         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16 md:gap-6 py-4">
-            <div class="logo flex flex-col gap-6 col-span-2 md:col-span-4 lg:col-span-1">
-               <img src="./images/logo.svg" alt="logo" class="w-20">
-               <h2 class="text-3xl">Protein house</h2>
-               <p>Lorem ipsum dolor sit amet consectetur. Tincidunt aliquam pulvinar donec rutrum dolor.</p>
-            </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">Shop</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">our products</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">Quick links</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">Best seller</a>
-                  </li>
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">Offers </a>
-                  </li>
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">Brands</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">About Us</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">About</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">Wishlist</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">My Favorite</a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-         <div class="links text-center border-t border-secondary mt-16">
-            <h3 class="text-3xl my-4">Social media</h3>
-            <div class="flex gap-4 items-center justify-center">
-               <a href="#">
-                  <img src="./images/icons/facebook.svg" alt="">
-               </a>
-               <a href="#">
-                  <img src="./images/icons/instagram.svg" alt="">
-               </a>
-            </div>
-         </div>
-      </div>
-   </footer>
-   <!-- Footer -->
-   <script src="main.js"></script>
+   <script src="../main.js"></script>
 </body>
 
 </html>

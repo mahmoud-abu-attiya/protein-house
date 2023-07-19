@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <link rel="stylesheet" href="/dist/output.css">
+   <link rel="stylesheet" href="../dist/output.css">
    <style>
-      .moto-amimation{
+      /* change */
+      @font-face {
+         font-family: "ElMessiri-Regular";
+         src: url("../fonts/ElMessiri-Regular.ttf");
+      }
+
+      * {
+         font-family: "ElMessiri-Regular", sans-serif !important;
+      }
+
+      /* change */
+      .moto-amimation {
          animation: moto 1.5s ease-in-out infinite;
       }
+
       @keyframes moto {
-         0%{
+         0% {
             transform: translateX(0);
          }
-         50%{
+
+         50% {
             transform: translateX(-10px);
          }
-         100%{
+
+         100% {
             transform: translateX(0);
          }
       }
    </style>
 </head>
+
 <body>
    <div class="container relative flex flex-col items-center justify-center min-h-screen">
       <a href="/" class="absolute top-8 left-4">
-         <img src="./images/icons/arrowback.svg" alt="">
+         <img src="../images/icons/arrowback.svg" alt="">
       </a>
-      <img src="./images/comfirm.svg" alt="" class="moto-amimation">
-      <h1 class="text-5xl md:text-6xl my-8">CONGRATS</h1>
-      <h3 class="text-3xl md:text-4xl">YOU ORDER IS ON THE WAY</h3>
+      <img src="../images/confirm.svg" alt="" class="moto-amimation">
+      <h1 class="text-5xl md:text-6xl my-8">تهاني</h1> <!-- change -->
+      <h3 class="text-3xl md:text-4xl">طلبك في الطريق</h3> <!-- change -->
    </div>
 </body>
+
 </html>

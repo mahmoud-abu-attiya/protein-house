@@ -7,6 +7,17 @@
    <title>Document</title>
    <link rel="stylesheet" href="/dist/output.css">
    <style>
+      /* change */
+      @font-face {
+         font-family: "ElMessiri-Regular";
+         src: url("../fonts/ElMessiri-Regular.ttf");
+      }
+
+      * {
+         font-family: "ElMessiri-Regular", sans-serif !important;
+      }
+
+      /* change */
       input::placeholder {
          /* Chrome, Firefox, Opera, Safari 10.1+ */
          color: #ffd0bf8a;
@@ -26,50 +37,50 @@
    </style>
 </head>
 
-<body>
+<body dir="rtl"> <!-- change -->
    <!-- header -->
    <header class="Vegawanty_font border-b z-20 bg-primary fixed w-full border-secondary py-4 md:py-0">
       <div class="container flex justify-between items-center">
          <div class="md:hidden flex items-center gap-4">
             <button id="opemaside">
-               <img src="./images/icons/bars.svg" alt="icon" class="icon">
+               <img src="../images/icons/bars.svg" alt="icon" class="icon">
             </button>
             <button>
-               <img src="./images/icons/search.svg" alt="icon" class="icon">
+               <img src="../images/icons/search.svg" alt="icon" class="icon">
             </button>
          </div>
          <div class="logo flex gap-2 md:gap-4 items-center">
-            <img src="./images/logo.svg" alt="logo">
-            <h1 class="text-xl md:text-2xl">Protein house</h1>
+            <img src="../images/logo.svg" alt="logo">
+            <h1 class="text-xl md:text-2xl">بيت البروتين</h1> <!-- change -->
          </div>
          <nav class="hidden md:block">
             <ul class="flex items-center gap-8">
                <li class="py-8 border-b-4 border-secondary">
-                  <a href="/">Home</a>
+                  <a href="/">الرئيسية</a> <!-- change -->
                </li>
                <li class="py-8">
-                  <a href="shop.html">Shop</a>
+                  <a href="shop.html">التسوق</a> <!-- change -->
                </li>
-               <li class="py-8">
+               <!-- <li class="py-8">
                   <a href="/">My routine</a>
-               </li>
+               </li> -->
                <li class="py-8">
-                  <a href="/">About</a>
+                  <a href="/about.html">عنا</a> <!-- change -->
                </li>
             </ul>
          </nav>
          <div class="btns flex gap-4 items-center">
             <a href="#" class="icon hidden md:block">
-               <img src="./images/icons/search.svg" alt="icon">
+               <img src="../images/icons/search.svg" alt="icon">
             </a>
-            <a href="#">
-               <img src="./images/icons/profile.svg" alt="icon">
-            </a>
+            <!-- <a href="#">
+               <img src="../images/icons/profile.svg" alt="icon">
+            </a> -->
             <a href="#" class="icon">
-               <img src="./images/icons/heart.svg" alt="icon">
+               <img src="../images/icons/heart.svg" alt="icon">
             </a>
             <button class="icon cartBtn">
-               <img src="./images/icons/cart.svg" alt="icon">
+               <img src="../images/icons/cart.svg" alt="icon">
             </button>
 
          </div>
@@ -82,25 +93,25 @@
          class="translate-x-full  transition duration-300 cartSection relative h-full w-full max-w-xl bg-primary shadow-xl">
          <div class="head p-4 md:p-6 flex justify-between items-center">
             <button class="closeCart">
-               <img src="./images/icons/times.svg" alt="">
+               <img src="../images/icons/times.svg" alt="">
             </button>
-            <h4 class="text-2xl">Your Cart</h4>
+            <h4 class="text-2xl">عربتك</h4> <!-- change -->
             <div class="relative">
                <div
                   class="absolute -top-1 -right-1 w-4 h-4 bg-red-600 rounded-full flex justify-center items-center text-xs text-white">
                   2</div>
-               <img src="./images/icons/cartFill.svg" alt="">
+               <img src="../images/icons/cartFill.svg" alt="">
             </div>
          </div>
          <div class="items p-4 md:px-6 md:pt-6 flex flex-col gap-4 h-full overflow-auto pb-52">
             <div class="item grid grid-cols-5 gap-4 items-center">
                <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                  <img src="../images/product.png" alt="" class="w-full h-full object-contain">
                </div>
                <div class="info col-span-3 flex flex-col justify-between">
                   <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                     <h4 class="text-xl">اسم المنتج</h4> <!-- change -->
+                     <p class="text-sm my-4">وصف المنتج وصف المنتج وصف المنتج وصف المنتج</p> <!-- change -->
                   </div>
                   <div class="flex gap-4 items-end">
                      <div class="flex gap-2 items-center border border-secondary">
@@ -109,103 +120,7 @@
                         <button class="px-4 py-1 hover:bg-therd/50 c_increase">+</button>
                      </div>
                      <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-span-1">
-                  120EGP
-               </div>
-            </div>
-            <div class="item grid grid-cols-5 gap-4 items-center">
-               <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                  <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-               </div>
-               <div class="info col-span-3 flex flex-col justify-between">
-                  <div>
-                     <h4 class="text-xl">Whey Protein</h4>
-                     <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                  </div>
-                  <div class="flex gap-4 items-end">
-                     <div class="flex gap-2 items-center border border-secondary">
-                        <button class="px-4 py-1 hover:bg-therd/50">-</button>
-                        <span class="text-xl">1</span>
-                        <button class="px-4 py-1 hover:bg-therd/50">+</button>
-                     </div>
-                     <div class="remove">
-                        <button class="hover:underline">Remove</button>
+                        <button class="hover:underline">اذالة</button> <!-- change -->
                      </div>
                   </div>
                </div>
@@ -216,7 +131,7 @@
          </div>
          <div class="absolute bottom-0 w-full p-6 border-t border-secondary bg-primary mt-[100%]">
             <button class="bg-secondary text-primary p-4 w-full text-center">
-               Go To Checkout | 240EGP
+               خط الدفع | 240EGP <!-- change -->
             </button>
          </div>
       </div>
@@ -225,7 +140,7 @@
    <aside
       class="fixed block shadow-lg md:hidden top-0 left-0 w-full h-full z-30 bg-primary pt-20 text-3xl transition duration-500 -translate-x-full">
       <button class="absolute top-4 left-8" id="closeaside">
-         <img src="./images/icons/times.svg" alt="">
+         <img src="../images/icons/times.svg" alt="">
       </button>
       <div class="container px-8">
          <ul class="flex flex-col gap-4">
@@ -256,25 +171,26 @@
          </ul>
       </div>
    </aside>
-   <!-- aside -->
    <div class="h-screen min-h-[620px] py-28 flex items-center">
       <div class="container">
          <div class="text-center max-w-xl mx-auto">
-            <h1 class="text-5xl mb-8">Log in</h1>
+            <h1 class="text-5xl mb-8">تسجيل الدخول</h1> <!-- change -->
             <form action="" class="flex flex-col gap-4">
-               <input type="email" placeholder="Your Email"
-                  class="px-4 py-3 border text-secondary bg-primary border-secondary outline-none">
-               <input type="password" placeholder="Password"
-                  class="px-4 py-3 border text-secondary bg-primary border-secondary outline-none">
-               <input type="submit" value="Continue" class="px-4 py-3 text-primary bg-secondary cursor-pointer outline-none">
+               <input type="email" placeholder="بريدك الالكتروني"
+                  class="px-4 py-3 border text-secondary bg-primary border-secondary outline-none"> <!-- change placeholder -->
+               <input type="password" placeholder="كلمة المرور"
+                  class="px-4 py-3 border text-secondary bg-primary border-secondary outline-none"> <!-- change placeholder -->
+               <input type="submit" value="استمر"
+                  class="px-4 py-3 text-primary bg-secondary cursor-pointer outline-none">
             </form>
             <div class="or mb-4 mt-8 relative">
-               <span class="block w-fit mx-auto px-4 bg-primary">or</span>
+               <span class="block w-fit mx-auto px-4 bg-primary">او</span> <!-- change -->
                <span class="block absolute -z-10 h-[1px] w-full bg-secondary top-1/2 left-0 -translate-y-1/2"></span>
             </div>
-            <button class="flex gap-8 items-center justify-center border border-secondary px-4 py-3 w-full outline-none">
+            <button
+               class="flex gap-8 items-center justify-center border border-secondary px-4 py-3 w-full outline-none">
                <img src="./images/icons/google.svg" alt="">
-               Log in with Google
+               تسجيل الدخول عبر جوجل <!-- change -->
             </button>
          </div>
       </div>

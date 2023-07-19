@@ -6,8 +6,19 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <link rel="stylesheet" href="/dist/output.css">
+   <link rel="stylesheet" href="../dist/output.css">
    <style>
+      /* change */
+      @font-face {
+         font-family: "ElMessiri-Regular";
+         src: url('../fonts/ElMessiri-Regular.ttf');
+      }
+
+      * {
+         font-family: 'ElMessiri-Regular', sans-serif !important;
+      }
+
+      /* change */
       input::placeholder {
          /* Chrome, Firefox, Opera, Safari 10.1+ */
          color: #ffd0bf8a;
@@ -41,8 +52,9 @@
          background: #1d0b2f86;
          border-radius: 5px;
       }
+
       @media (max-width: 1024px) {
-         .container{
+         .container {
             width: 100% !important;
             max-width: 100% !important;
          }
@@ -50,81 +62,79 @@
    </style>
 </head>
 
-<body>
+<body dir="rtl"> <!-- change  -->
    <!-- header -->
    <header class="flex gap-6 items-center flex-col py-6 px-4 border-b border-secondary">
       <div class="logo flex gap-2 md:gap-4 items-center">
-         <img src="./images/logo.svg" alt="logo">
-         <h1 class="text-xl md:text-2xl">Protein house</h1>
+         <img src="../images/logo.svg" alt="logo">
+         <h1 class="text-xl md:text-2xl">بيت البروتين</h1> <!-- change  -->
       </div>
       <nav>
          <ul class="flex gap-4 items-center">
-            <li class="opacity-70">Cart</li>
+            <li class="opacity-70">عربة التسوق</li> <!-- change  -->
             <li class="active">
-               <img src="./images/icons/arrowrighto.svg" alt="">
+               <img src="../images/icons/arrowrighto.svg" alt="">
             </li>
-            <li class="">Information</li>
+            <li class="">معلومات</li> <!-- change  -->
             <li class="active">
-               <img src="./images/icons/arrowrighto.svg" alt="">
+               <img src="../images/icons/arrowrighto.svg" alt="">
             </li>
-            <li class="opacity-70">Payment</li>
+            <li class="opacity-70">الدفع</li> <!-- change  -->
          </ul>
       </nav>
    </header>
    <main class="flex flex-col justify-between min-h-[83vh]">
       <div class="container md:grid md:grid-cols-2">
          <form action="" class="p-4 flex gap-4 md:gap-2 flex-col">
-            <h2 class="text-2xl">Contact Information</h2>
+            <h2 class="text-2xl">معلومات الاتصال</h2> <!-- change  -->
             <div class="relative">
                <input type="email" id="email"
                   class="block px-4 pb-3 pt-6 w-full text-sm text-secondary bg-primary border border-secondary/50 appearance-none focus:outline-none focus:ring-0 focus:border-secondary peer"
                   placeholder=" " />
                <label for="email"
-                  class="absolute text-sm text-secondary/50 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-4 peer-focus:text-secondary peer-placeholder-shown:text-secondary/50 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">Email</label>
+                  class="absolute text-sm text-secondary/50 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] right-4 peer-focus:text-secondary peer-placeholder-shown:text-secondary/50 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">بريد إلكتروني</label> <!-- change left and content -->
             </div>
             <div class="relative">
                <input type="text" id="first_name"
                   class="block px-4 pb-3 pt-6 w-full text-sm text-secondary bg-primary border border-secondary/50 appearance-none focus:outline-none focus:ring-0 focus:border-secondary peer"
                   placeholder=" " />
                <label for="first_name"
-                  class="absolute text-sm text-secondary/50 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-4 peer-focus:text-secondary peer-placeholder-shown:text-secondary/50 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">First
-                  Name</label>
+                  class="absolute text-sm text-secondary/50 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] right-4 peer-focus:text-secondary peer-placeholder-shown:text-secondary/50 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">الاسم الأول</label> <!-- change left and content -->
             </div>
             <div class="relative">
                <input type="text" id="last_name"
                   class="block px-4 pb-3 pt-6 w-full text-sm text-secondary bg-primary border border-secondary/50 appearance-none focus:outline-none focus:ring-0 focus:border-secondary peer"
                   placeholder=" " />
                <label for="last_name"
-                  class="absolute text-sm text-secondary/50 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] left-4 peer-focus:text-secondary peer-placeholder-shown:text-secondary/50 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">Last
-                  Name</label>
+                  class="absolute text-sm text-secondary/50 duration-300 transform -translate-y-4 scale-75 top-5 z-10 origin-[0] right-4 peer-focus:text-secondary peer-placeholder-shown:text-secondary/50 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3">اسم العائلة</label> <!-- change left and content -->
             </div>
             <h2 class="text-2xl mt-4">
-               Shipping Address
+               عنوان الشحن <!-- change  -->
             </h2>
-            <input type="text" placeholder="Address"
-               class="py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none">
-            <input type="text" placeholder="Additional Address (Optional)"
-               class="py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none">
+            <input type="text" placeholder="عنوان" 
+               class="py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none"> <!-- change  -->
+            <input type="text" placeholder="عنوان إضافي (اختياري)"
+               class="py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none"> <!-- change  -->
             <div class="grid grid-cols-3 gap-2">
-               <input type="text" placeholder="City"
-                  class="col-span-2 py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none">
-               <input type="number" placeholder="Postal code"
-                  class="py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none">
+               <input type="text" placeholder="مدينة"
+                  class="col-span-2 py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none"> <!-- change  -->
+               <input type="number" placeholder="رمز بريدي"
+                  class="py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none"> <!-- change  -->
             </div>
             <input type="tel" placeholder="Phone number"
                class="py-2.5 px-4 border border-secondary/50 focus:border-secondary bg-primary outline-none">
-            <button type="submit" class="text-primary bg-secondary text-xl p-4 mt-auto">Continue To Payment Method</button>
+            <button type="submit" class="text-primary bg-secondary text-xl p-4 mt-auto">تابع إلى طريقة الدفع</button> <!-- change  -->
          </form>
-         <div class="grid-rows-4 max-h-[80vh] px-10 py-6 border-l border-secondary hidden md:grid">
+         <div class="grid-rows-4 max-h-[80vh] px-10 py-6 border-r border-secondary hidden md:grid"> <!-- change border-l to border-r  -->
             <div class="row-span-3 flex gap-4 flex-col overflow-y-auto overflow-x-hidden">
                <div class="item grid grid-cols-5 gap-4 items-center">
                   <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                     <img src="./images/product.png" alt="" class="w-full h-full object-contain">
+                     <img src="../images/product.png" alt="" class="w-full h-full object-contain">
                   </div>
                   <div class="info col-span-3 flex flex-col justify-between">
                      <div>
-                        <h4 class="text-xl">Whey Protein</h4>
-                        <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
+                        <h4 class="text-xl">اسم المنتج</h4> <!-- change  -->
+                        <p class="text-sm my-4">اسم المنتج اسم المنتج اسم المنتج اسم المنتج</p> <!-- change  -->
                      </div>
                      <div class="flex gap-4 items-end">
                         <div class="flex gap-2 items-center border border-secondary">
@@ -133,31 +143,7 @@
                            <button class="px-4 py-1 hover:bg-therd/50 c_increase">+</button>
                         </div>
                         <div class="remove">
-                           <button class="hover:underline">Remove</button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-span-1">
-                     120EGP
-                  </div>
-               </div>
-               <div class="item grid grid-cols-5 gap-4 items-center">
-                  <div class="img col-span-1 border border-secondary p-4 h-full max-h-32">
-                     <img src="./images/product.png" alt="" class="w-full h-full object-contain">
-                  </div>
-                  <div class="info col-span-3 flex flex-col justify-between">
-                     <div>
-                        <h4 class="text-xl">Whey Protein</h4>
-                        <p class="text-sm my-4">Lorem ipsum, dolor sit amet consectetur elit.</p>
-                     </div>
-                     <div class="flex gap-4 items-end">
-                        <div class="flex gap-2 items-center border border-secondary">
-                           <button class="px-4 py-1 hover:bg-therd/50 c_decrease">-</button>
-                           <span class="text-xl">1</span>
-                           <button class="px-4 py-1 hover:bg-therd/50 c_increase">+</button>
-                        </div>
-                        <div class="remove">
-                           <button class="hover:underline">Remove</button>
+                           <button class="hover:underline">إزالة</button> <!-- change  -->
                         </div>
                      </div>
                   </div>
@@ -168,16 +154,16 @@
             </div>
             <div class="info flex flex-col px-8 border-t border-secondary p-4">
                <div class="flex justify-between">
-                  <div class="">Subtotal</div>
+                  <div class="">المجموع الفرعي</div> <!-- change  -->
                   <div class="">120EGP</div>
                </div>
                <div class="flex justify-between">
-                  <div class="">Shipping</div>
-                  <div class="">Calculated At Next Step</div>
+                  <div class="">شحن</div> <!-- change  -->
+                  <div class="">محسوبة في الخطوة التالية</div> <!-- change  -->
                </div>
                <hr class="bg-secondary border-none h-[1px] my-4">
                <div class="flex justify-between">
-                  <div class="">Total</div>
+                  <div class="">المجموع</div> <!-- change  -->
                   <div class="">1200EGP</div>
                </div>
             </div>
