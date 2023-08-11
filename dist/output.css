@@ -651,6 +651,10 @@ video {
   left: 0px;
 }
 
+.left-1\/2 {
+  left: 50%;
+}
+
 .left-24 {
   left: 6rem;
 }
@@ -665,6 +669,10 @@ video {
 
 .right-0 {
   right: 0px;
+}
+
+.right-24 {
+  right: 6rem;
 }
 
 .right-4 {
@@ -697,14 +705,6 @@ video {
 
 .top-full {
   top: 100%;
-}
-
-.right-24 {
-  right: 6rem;
-}
-
-.left-1\/2 {
-  left: 50%;
 }
 
 .isolate {
@@ -810,6 +810,16 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .mb-10 {
@@ -987,6 +997,18 @@ video {
   height: 100vh;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
+.h-2 {
+  height: 0.5rem;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
 .max-h-32 {
   max-height: 8rem;
 }
@@ -997,6 +1019,10 @@ video {
 
 .min-h-\[250px\] {
   min-height: 250px;
+}
+
+.min-h-\[30rem\] {
+  min-height: 30rem;
 }
 
 .min-h-\[620px\] {
@@ -1018,14 +1044,6 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-\[20rem\] {
-  min-height: 20rem;
-}
-
-.min-h-\[30rem\] {
-  min-height: 30rem;
 }
 
 .w-16 {
@@ -1057,8 +1075,24 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
 }
 
 .max-w-lg {
@@ -1067,10 +1101,6 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
 }
 
 .flex-1 {
@@ -1121,6 +1151,11 @@ video {
   transform-origin: 0;
 }
 
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .-translate-x-10 {
   --tw-translate-x: -2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1163,11 +1198,6 @@ video {
 
 .translate-y-8 {
   --tw-translate-y: 2rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-1\/2 {
-  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1698,6 +1728,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-28 {
+  gap: 7rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -1716,18 +1750,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-10 {
-  gap: 2.5rem;
-}
-
-.gap-20 {
-  gap: 5rem;
-}
-
-.gap-28 {
-  gap: 7rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2403,6 +2425,11 @@ video {
   padding-bottom: 0.625rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -2433,11 +2460,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -2448,6 +2470,10 @@ video {
 
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pb-52 {
@@ -2490,8 +2516,8 @@ video {
   padding-top: 2rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .text-left {
@@ -2949,6 +2975,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.drop-shadow-xl {
+  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .grayscale {
   --tw-grayscale: grayscale(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -3364,6 +3395,10 @@ header .icon{
     width: 50%;
   }
 
+  .md\:w-6 {
+    width: 1.5rem;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3441,6 +3476,10 @@ header .icon{
 
   .md\:pt-6 {
     padding-top: 1.5rem;
+  }
+
+  .md\:pt-20 {
+    padding-top: 5rem;
   }
 
   .md\:text-start {
