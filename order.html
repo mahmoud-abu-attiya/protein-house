@@ -3,14 +3,10 @@
 
 <head>
    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="/dist/output.css">
-   <style>
-      .active-section {
-         opacity: 1;
-      }
-   </style>
 </head>
 
 <body>
@@ -31,10 +27,10 @@
          </div>
          <nav class="hidden md:block">
             <ul class="flex items-center gap-8">
-               <li class="py-8 border-b-4 border-secondary">
+               <li class="py-8">
                   <a href="/">Home</a>
                </li>
-               <li class="py-8">
+               <li class="py-8 border-b-4 border-secondary">
                   <a href="shop.html">Shop</a>
                </li>
                <li class="py-8">
@@ -49,16 +45,12 @@
             <a href="#" class="icon hidden md:block">
                <img src="./images/icons/search.svg" alt="icon">
             </a>
-            <a href="#">
-               <img src="./images/icons/profile-fill.svg" alt="icon">
-            </a>
             <a href="#" class="icon">
                <img src="./images/icons/heart.svg" alt="icon">
             </a>
             <button class="icon cartBtn">
                <img src="./images/icons/cart.svg" alt="icon">
             </button>
-
          </div>
       </div>
    </header>
@@ -243,434 +235,135 @@
          </ul>
       </div>
    </aside>
-   <!-- ////////////////////////// Personal /////////////////////////////////// -->
-   <div class="h-screen min-h-[620px] py-28 flex md:items-center">
-      <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-14">
-         <div class="hidden md:block border-r border-secondary">
-            <div class="flex items-center gap-4 text-xl mb-10">
-               <span class="block bg-secondary w-6 h-[0.3rem]"></span>
-               My Dashboard
-            </div>
-            <ul class="flex flex-col gap-4">
-               <li class="underline opacity-50 active-section">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">My address</a>
-               </li>
-            </ul>
-            <a href="/" class="mt-10 block opacity-50">Log out</a>
-         </div>
-         <div class="md:col-span-3">
-            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">Personal
-               Information</h1>
-            <ul class="md:hidden flex gap-5 overflow-x-scroll py-4 justify-center">
-               <li class="underline whitespace-nowrap opacity-50 active-section">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">My address</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Log out</a>
-               </li>
-            </ul>
-            <div class="flex flex-col gap-4 py-14">
-               <div>Contact Information</div>
-               <div class="text-2xl">Mahmoud Abu-Attiya</div>
-               <div>mahmoud.abuattiya@gmail.com</div>
-               <a href="#" class="underline opacity-50">Change Password</a>
-            </div>
-         </div>
-
-      </div>
-   </div>
-   <!-- ////////////////////////// WishList /////////////////////////////////// -->
-   <div class="min-h-[620px] py-28 flex md:items-center">
-      <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-14">
-         <div class="hidden md:block border-r border-secondary">
-            <div class="flex items-center gap-4 text-xl mb-10">
-               <span class="block bg-secondary w-6 h-[0.3rem]"></span>
-               My Dashboard
-            </div>
-            <ul class="flex flex-col gap-4">
-               <li class="underline opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline opacity-50 active-section">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">My address</a>
-               </li>
-            </ul>
-            <a href="/" class="mt-10 block opacity-50">Log out</a>
-         </div>
-         <div class="md:col-span-3">
-            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">Wishlist
-            </h1>
-            <ul class="md:hidden flex gap-5 overflow-x-scroll py-4 justify-center">
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50 active-section">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">My address</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Log out</a>
-               </li>
-            </ul>
-            <div class="grid grid-cols-2 md:grid-cols-3">
-               <div class="relative">
-                  <button class="absolute top-4 right-4 z-10">
-                     <img src="./images/icons/heart.svg" alt="">
-                  </button>
-                  <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
-                     <div
-                        class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
-                        <h3 class="text-xl">Product name</h3>
-                        <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
-                        <span>120EGP</span>
-                        <div class="rating flex items-center gap-4 mx-auto w-fit">
-                           <div class="flex items-center">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                           </div>
-                           4.5
-                        </div>
-                     </div>
-                     <img src="./images/product.png" alt="product" class="mx-auto">
-                     <h3 class="text-xl">Product name</h3>
-                     <p class="">Lorem ipsum dolor sit amet conse...</p>
-                     <span>120EGP</span>
-                     <div class="rating flex items-center gap-4 mx-auto w-fit">
-                        <div class="flex items-center">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                        </div>
-                        4.5
-                     </div>
-                  </a>
-               </div>
-               <div class="relative">
-                  <button class="absolute top-4 right-4 z-10">
-                     <img src="./images/icons/heart.svg" alt="">
-                  </button>
-                  <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
-                     <div
-                        class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
-                        <h3 class="text-xl">Product name</h3>
-                        <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
-                        <span>120EGP</span>
-                        <div class="rating flex items-center gap-4 mx-auto w-fit">
-                           <div class="flex items-center">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                           </div>
-                           4.5
-                        </div>
-                     </div>
-                     <img src="./images/product.png" alt="product" class="mx-auto">
-                     <h3 class="text-xl">Product name</h3>
-                     <p class="">Lorem ipsum dolor sit amet conse...</p>
-                     <span>120EGP</span>
-                     <div class="rating flex items-center gap-4 mx-auto w-fit">
-                        <div class="flex items-center">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                        </div>
-                        4.5
-                     </div>
-                  </a>
-               </div>
-               <div class="relative">
-                  <button class="absolute top-4 right-4 z-10">
-                     <img src="./images/icons/heart.svg" alt="">
-                  </button>
-                  <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
-                     <div
-                        class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
-                        <h3 class="text-xl">Product name</h3>
-                        <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
-                        <span>120EGP</span>
-                        <div class="rating flex items-center gap-4 mx-auto w-fit">
-                           <div class="flex items-center">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                              <img src="./images/icons/star.svg" alt="star">
-                           </div>
-                           4.5
-                        </div>
-                     </div>
-                     <img src="./images/product.png" alt="product" class="mx-auto">
-                     <h3 class="text-xl">Product name</h3>
-                     <p class="">Lorem ipsum dolor sit amet conse...</p>
-                     <span>120EGP</span>
-                     <div class="rating flex items-center gap-4 mx-auto w-fit">
-                        <div class="flex items-center">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                           <img src="./images/icons/star.svg" alt="star">
-                        </div>
-                        4.5
-                     </div>
-                  </a>
-               </div>
-            </div>
-         </div>
-
-      </div>
-   </div>
-   <!-- ////////////////////////// Address /////////////////////////////////// -->
-   <div class="h-screen min-h-[620px] py-28 flex md:items-center">
-      <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-14">
-         <div class="hidden md:block border-r border-secondary">
-            <div class="flex items-center gap-4 text-xl mb-10">
-               <span class="block bg-secondary w-6 h-[0.3rem]"></span>
-               My Dashboard
-            </div>
-            <ul class="flex flex-col gap-4">
-               <li class="underline opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline opacity-50 active-section">
-                  <a href="">My address</a>
-               </li>
-            </ul>
-            <a href="/" class="mt-10 block opacity-50">Log out</a>
-         </div>
-         <div class="md:col-span-3">
-            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">My address
-            </h1>
-            <ul class="md:hidden flex gap-5 overflow-x-scroll py-4 justify-center">
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50 active-section">
-                  <a href="">My address</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Log out</a>
-               </li>
-            </ul>
-            <div class="flex flex-col gap-4 py-14">
-               <div>Contact Information</div>
-               <div class="text-2xl">Mahmoud Abu-Attiya</div>
-               <div>+20 102 038 4108</div>
-               <div>Egypt, Kafr el-shakhe, Desouq</div>
-            </div>
-         </div>
-
-      </div>
-   </div>
-   <!-- ////////////////////////// History /////////////////////////////////// -->
-   <div class="h-screen min-h-[620px] py-28 flex md:items-center">
-      <div class="container grid grid-cols-1 md:grid-cols-4 md:gap-14">
-         <div class="hidden md:block border-r border-secondary">
-            <div class="flex items-center gap-4 text-xl mb-10">
-               <span class="block bg-secondary w-6 h-[0.3rem]"></span>
-               Order History
-            </div>
-            <ul class="flex flex-col gap-4">
-               <li class="underline opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">My address</a>
-               </li>
-               <li class="underline opacity-50 active-section">
-                  <a href="">Order History</a>
-               </li>
-            </ul>
-            <a href="/" class="mt-10 block opacity-50">Log out</a>
-         </div>
-         <div class="md:col-span-3">
-            <h1 class="border-b border-secondary text-3xl md:text-5xl pb-8 w-full text-center md:text-start">Order
-               History
-            </h1>
-            <ul class="md:hidden flex gap-5 overflow-x-scroll py-4 justify-center">
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Personal Information</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">Wishlist</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50">
-                  <a href="">My address</a>
-               </li>
-               <li class="underline whitespace-nowrap opacity-50 active-section">
-                  <a href="">Order History</a>
-               </li>
-               <li class="underline opacity-50">
-                  <a href="">Log out</a>
-               </li>
-            </ul>
-
-            <div class="relative overflow-x-auto">
-               <table class="w-full text-sm text-left border-x border-secondary border-b">
-                  <thead class="text-xs text-primary uppercase bg-secondary/25">
-                     <tr>
-                        <th scope="col" class="px-6 py-3">
-                           Order Number
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                           Date
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                           Total
-                        </th>
-                        <th scope="col" class="px-6 py-3">
-                           Status
-                        </th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <tr class=" border-b border-secondary">
-                        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                           <a href="/order.html" class="underline">65451</a>
-                        </th>
-                        <td class="px-6 py-4">
-                           10/09/2021
-                        </td>
-                        <td class="px-6 py-4">
-                           120EGP
-                        </td>
-                        <td class="px-6 py-4">
-                           Pending
-                        </td>
-                     </tr>
-                     <tr class=" border-b border-secondary">
-                        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                           <a href="/order.html" class="underline">654654</a>
-                        </th>
-                        <td class="px-6 py-4">
-                           10/09/2021
-                        </td>
-                        <td class="px-6 py-4">
-                           120EGP
-                        </td>
-                        <td class="px-6 py-4">
-                           Delivered
-                        </td>
-                     </tr>
-                     <tr class="">
-                        <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                           <a href="/order.html" class="underline">98453</a>
-                        </th>
-                        <td class="px-6 py-4">
-                           10/09/2021
-                        </td>
-                        <td class="px-6 py-4">
-                           120EGP
-                        </td>
-                        <td class="px-6 py-4">
-                           Delivered
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </div>
-
-         </div>
-
-      </div>
-   </div>
-   <!-- Footer -->
-   <footer class="border-t border-secondary py-8">
+   <div class="py-32">
       <div class="container">
-         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16 md:gap-6 py-4">
-            <div class="logo flex flex-col gap-6 col-span-2 md:col-span-4 lg:col-span-1">
-               <img src="./images/logo.svg" alt="logo" class="w-20">
-               <h2 class="text-3xl">Protein house</h2>
-               <p>Lorem ipsum dolor sit amet consectetur. Tincidunt aliquam pulvinar donec rutrum dolor.</p>
+         <div class="grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-0">
+            <div class="md:col-span-3 grid grid-cols-2 md:grid-cols-3 order-2 md:order-1">
+               <h2 class="text-4xl col-span-2 md:col-span-3">Items :</h2>
+               <div class="relative">
+                  <button class="absolute top-4 right-4 z-10">
+                     <img src="./images/icons/heart.svg" alt="">
+                  </button>
+                  <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                     <div
+                        class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                        <h3 class="text-xl">Product name</h3>
+                        <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                        <span>120EGP</span>
+                        <div class="rating flex items-center gap-4 mx-auto w-fit">
+                           <div class="flex items-center">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                           </div>
+                           4.5
+                        </div>
+                     </div>
+                     <img src="./images/product.png" alt="product" class="mx-auto">
+                     <h3 class="text-xl">Product name</h3>
+                     <p class="">Lorem ipsum dolor sit amet conse...</p>
+                     <span>120EGP</span>
+                     <div class="rating flex items-center gap-4 mx-auto w-fit">
+                        <div class="flex items-center">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                        </div>
+                        4.5
+                     </div>
+                  </a>
+               </div>
+               <div class="relative">
+                  <button class="absolute top-4 right-4 z-10">
+                     <img src="./images/icons/heart.svg" alt="">
+                  </button>
+                  <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                     <div
+                        class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                        <h3 class="text-xl">Product name</h3>
+                        <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                        <span>120EGP</span>
+                        <div class="rating flex items-center gap-4 mx-auto w-fit">
+                           <div class="flex items-center">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                           </div>
+                           4.5
+                        </div>
+                     </div>
+                     <img src="./images/product.png" alt="product" class="mx-auto">
+                     <h3 class="text-xl">Product name</h3>
+                     <p class="">Lorem ipsum dolor sit amet conse...</p>
+                     <span>120EGP</span>
+                     <div class="rating flex items-center gap-4 mx-auto w-fit">
+                        <div class="flex items-center">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                        </div>
+                        4.5
+                     </div>
+                  </a>
+               </div>
+               <div class="relative">
+                  <button class="absolute top-4 right-4 z-10">
+                     <img src="./images/icons/heart.svg" alt="">
+                  </button>
+                  <a href="product.html" class="card text-center p-4 relative flex flex-col gap-4 group">
+                     <div
+                        class="absolute w-full h-full top-0 left-0 bg-therd/75 p-4 backdrop-blur-sm flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 gap-4">
+                        <h3 class="text-xl">Product name</h3>
+                        <p class="text-xs md:text-base">Lorem ipsum dolor sit amet conse...</p>
+                        <span>120EGP</span>
+                        <div class="rating flex items-center gap-4 mx-auto w-fit">
+                           <div class="flex items-center">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                              <img src="./images/icons/star.svg" alt="star">
+                           </div>
+                           4.5
+                        </div>
+                     </div>
+                     <img src="./images/product.png" alt="product" class="mx-auto">
+                     <h3 class="text-xl">Product name</h3>
+                     <p class="">Lorem ipsum dolor sit amet conse...</p>
+                     <span>120EGP</span>
+                     <div class="rating flex items-center gap-4 mx-auto w-fit">
+                        <div class="flex items-center">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                           <img src="./images/icons/star.svg" alt="star">
+                        </div>
+                        4.5
+                     </div>
+                  </a>
+               </div>
             </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">Shop</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">our products</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">Quick links</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">Best seller</a>
-                  </li>
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">Offers </a>
-                  </li>
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">Brands</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">About Us</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">About</a>
-                  </li>
-               </ul>
-            </div>
-            <div class="flex gap-8 flex-col">
-               <h3 class="text-2xl">Wishlist</h3>
-               <ul class="flex flex-col gap-4">
-                  <li class="capitalize">
-                     <a href="#" class="hover:underline">My Favorite</a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-         <div class="links text-center border-t border-secondary mt-16">
-            <h3 class="text-3xl my-4">Social media</h3>
-            <div class="flex gap-4 items-center justify-center">
-               <a href="#">
-                  <img src="./images/icons/facebook.svg" alt="">
-               </a>
-               <a href="#">
-                  <img src="./images/icons/instagram.svg" alt="">
-               </a>
+            <div class="flex flex-col gap-2 md:border-l border-secondary md:ml-4 md:pl-4 order-1 md:order-2">
+               <h2 class="text-4xl">Details :</h2>
+               <div><span class="font-bold">Order number</span> : <span>54128</span></div>
+               <div><span class="font-bold">Date</span> : <span>12/12/2021</span></div>
+               <div><span class="font-bold">Status</span> : <span>Delivered</span></div>
+               <div><span class="font-bold">Address</span> : <span>Desouq, Kafr El-shakhe</span></div>
+               <div><span class="font-bold">Phone</span> : <span>010203040506</span></div>
+               <div><span class="font-bold">Total Price</span> : <span>1530 EGP</span></div>
             </div>
          </div>
       </div>
-   </footer>
-   <!-- Footer -->
+   </div>
    <script src="main.js"></script>
 </body>
 
